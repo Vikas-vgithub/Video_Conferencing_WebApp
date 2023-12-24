@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "videoconferencing/wsgi.py",
+        "use": "@vercel/python",
+        "congig": { "maxLambdaSize": "15mb", "runtime": "python3.9"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "videoconferencing/wsgi.py"
+        }
+    ]
+}
